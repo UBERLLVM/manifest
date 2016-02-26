@@ -2,14 +2,17 @@
 <manifest>
   <remote  name="u"
            fetch="https://github.com/UBERLLVM/" />
+  <remote  name="ut"
+           fetch="https://github.com/UBERTC/" />
   <default revision="master"
            remote="u"
            sync-j="4"
-           sync-c="true" />
+           sync-c="true"
+           sync-f="true" />
 
   <project path="llvm" name="llvm" />
+  <project path="llvm/tools/binutils" name="binutils" remote="ut" revision="2.25" />
   <project path="llvm/tools/clang" name="clang" />
-  <project path="llvm/tools/lld" name="lld" />
   <project path="llvm/tools/polly" name="polly" />
   <project path="llvm/projects/compiler-rt" name="compiler-rt" />
   <project path="llvm/projects/libcxx" name="libcxx" />
