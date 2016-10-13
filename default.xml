@@ -13,6 +13,10 @@
            sync-c="true"
            sync-f="true" />
 
+  <project path="build" name="scripts" >
+    <copyfile src="build.sh" dest="build.sh" />
+  </project>
+
   <project path="llvm" name="llvm" />
   <project path="llvm/tools/binutils" name="binutils" remote="ut" revision="2.26" />
   <project path="llvm/tools/clang" name="clang" />
