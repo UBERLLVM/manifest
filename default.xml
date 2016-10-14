@@ -7,13 +7,13 @@
   <remote  name="ut"
            fetch="https://github.com/UBERTC/" />
 
-  <default revision="release_39"
+  <default revision="3.8"
            remote="u"
            sync-j="8"
            sync-c="true"
            sync-f="true" />
 
-  <project path="build" name="scripts" >
+  <project path="scripts" name="scripts" revision="master" >
     <copyfile src="build.sh" dest="build.sh" />
   </project>
 
@@ -26,5 +26,4 @@
   <project path="llvm/projects/libcxxabi" name="libcxxabi" />
   <project path="llvm/projects/libunwind" name="libunwind" />
   <project path="llvm/projects/openmp" name="openmp" />
-
 </manifest>
