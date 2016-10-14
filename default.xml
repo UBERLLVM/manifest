@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="u"
+  <remote  name="ul"
            fetch="https://github.com/UBERLLVM/" />
 
   <remote  name="ut"
            fetch="https://github.com/UBERTC/" />
 
   <default revision="3.8"
-           remote="u"
+           remote="ul"
            sync-j="8"
            sync-c="true"
            sync-f="true" />
