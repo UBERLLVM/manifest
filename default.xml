@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="ul"
+  <remote  name="ll"
+           fetch="https://github.com/llvm-mirror/" />
+
+  <remote name="ul"
            fetch="https://github.com/UBERLLVM/" />
 
-  <default revision="3.8"
-           remote="ul"
+  <remote  name="bu"
+           fetch="git://sourceware.org/git/" />
+
+  <default revision="release_40"
+           remote="ll"
            sync-j="8"
            sync-c="true"
            sync-f="true" />
 
-  <project path="scripts" name="scripts" revision="master" >
+  <project path="scripts" name="scripts" revision="master" remote="ul" >
     <copyfile src="build.sh" dest="build.sh" />
   </project>
 
   <project path="llvm" name="llvm" />
-  <project path="llvm/tools/binutils" name="binutils" revision="2.26" />
-  <project path="llvm/tools/clang" name="clang" />
-  <project path="llvm/tools/polly" name="polly" />
   <project path="llvm/projects/compiler-rt" name="compiler-rt" />
   <project path="llvm/projects/libcxx" name="libcxx" />
   <project path="llvm/projects/libcxxabi" name="libcxxabi" />
   <project path="llvm/projects/libunwind" name="libunwind" />
   <project path="llvm/projects/openmp" name="openmp" />
+  <project path="llvm/tools/binutils" name="binutils-gdb" revision="binutils-2_27-branch" remote="bu" />
+  <project path="llvm/tools/clang" name="clang" />
+  <project path="llvm/tools/polly" name="polly" />
 </manifest>
