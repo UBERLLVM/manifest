@@ -10,7 +10,7 @@
   <remote  name="bu"
            fetch="git://sourceware.org/git/" />
 
-  <default revision="release_80"
+  <default revision="master"
            remote="ll"
            sync-j="8"
            sync-c="true"
