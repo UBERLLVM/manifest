@@ -10,8 +10,11 @@
   <remote  name="bu"
            fetch="git://sourceware.org/git/" />
 
-  <default revision="master"
-           remote="ll"
+  <remote  name="gc"
+           fetch="https://android.googlesource.com/toolchain/" />
+  
+  <default revision="upstream-master"
+           remote="gc"
            sync-j="8"
            sync-c="true"
            sync-f="true" />
@@ -24,8 +27,8 @@
   <project path="llvm/projects/compiler-rt" name="compiler-rt" />
   <project path="llvm/projects/libcxx" name="libcxx" />
   <project path="llvm/projects/libcxxabi" name="libcxxabi" />
-  <project path="llvm/projects/libunwind" name="libunwind" />
-  <project path="llvm/projects/openmp" name="openmp" />
+  <project path="llvm/projects/libunwind" name="libunwind" remote="ll" revision="master" />
+  <project path="llvm/projects/openmp" name="openmp_llvm" />
   <project path="llvm/tools/binutils" name="binutils-gdb" revision="binutils-2_32-branch" remote="bu" />
   <project path="llvm/tools/clang" name="clang" />
   <project path="llvm/tools/polly" name="polly" />
