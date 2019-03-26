@@ -31,5 +31,5 @@
   <project path="llvm/projects/openmp" name="openmp_llvm" />
   <project path="llvm/tools/binutils" name="binutils-gdb" revision="binutils-2_32-branch" remote="bu" />
   <project path="llvm/tools/clang" name="clang" />
-  <project path="llvm/tools/polly" name="polly" />
+  <project path="llvm/tools/polly" name="polly" remote="ll" revision="master" />
 </manifest>
